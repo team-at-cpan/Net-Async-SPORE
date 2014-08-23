@@ -1,0 +1,88 @@
+{
+   "version" : "0.2",
+   "methods" : {
+      "create_document_without_id" : {
+         "required_params" : [
+            "database"
+         ],
+         "required_payload" : true,
+         "path" : "/:database",
+         "method" : "POST"
+      },
+      "get_all_documents" : {
+         "required_params" : [
+            "database"
+         ],
+         "optional_params" : [
+            "descending",
+            "startkey",
+            "endkey",
+            "limit",
+            "include_docs"
+         ],
+         "path" : "/:database/_all_docs",
+         "method" : "GET"
+      },
+      "create_document_with_id" : {
+         "required_params" : [
+            "database",
+            "doc_id"
+         ],
+         "required_payload" : true,
+         "path" : "/:database/:doc_id",
+         "method" : "POST"
+      },
+      "get_document" : {
+         "required_params" : [
+            "database",
+            "doc_id"
+         ],
+         "optional_params" : [
+            "rev",
+            "revs"
+         ],
+         "path" : "/:database/:doc_id",
+         "method" : "GET"
+      },
+      "get_info" : {
+         "required_params" : [
+            "database",
+            "doc_id"
+         ],
+         "path" : "/:database/:doc_id",
+         "method" : "HEAD"
+      },
+      "get_all_documents_by_seq" : {
+         "required_params" : [
+            "database"
+         ],
+         "optional_params" : [
+            "startkey",
+            "endkey",
+            "limit",
+            "include_docs"
+         ],
+         "path" : "/:database/_all_docs_by_seq",
+         "method" : "GET"
+      },
+      "delete_document" : {
+         "required_params" : [
+            "database",
+            "doc_id"
+         ],
+         "optional_params" : [
+            "rev"
+         ],
+         "path" : "/:database/:doc_id",
+         "method" : "DELETE"
+      }
+   },
+   "formats" : [
+      "json"
+   ],
+   "name" : "CouchDB",
+   "authority" : "GITHUB:franckcuny",
+   "meta" : {
+      "documentation" : "http://wiki.apache.org/couchdb/HTTP_Document_API"
+   }
+}

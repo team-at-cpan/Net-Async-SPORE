@@ -1,0 +1,168 @@
+{
+   "base_url" : "http://github.com/api/v2/",
+   "version" : "0.4",
+   "methods" : {
+      "user_search" : {
+         "path" : "/:format/user/search/:search",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "search"
+         ]
+      },
+      "get_info" : {
+         "path" : "/:format/user/show/:username",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "username"
+         ]
+      },
+      "get_profile" : {
+         "path" : "/:format/user/show",
+         "method" : "GET",
+         "required_params" : [
+            "format"
+         ],
+         "authentication" : true
+      },
+      "update_profile" : {
+         "path" : "/:format/user/show/:username",
+         "method" : "POST",
+         "form-data" : {
+            "values[name]"       : ":name",
+            "values[email]"      : ":email",
+            "values[blog]"       : ":blog",
+            "values[company]"    : ":company",
+            "values[location]"   : ":location"
+         },
+         "required_params" : [
+            "format",
+            "username"
+         ],
+         "optional_params" : [
+            "name",
+            "email",
+            "blog",
+            "company",
+            "location"
+         ],
+         "authentication" : true
+      },
+      "list_following" : {
+         "path" : "/:format/user/show/:user/following",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user"
+         ]
+      },
+      "list_followers" : {
+         "path" : "/:format/user/show/:user/followers",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user"
+         ]
+      },
+      "follow" : {
+         "path" : "/:format/user/follow/:user",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user"
+         ],
+         "authentication" : true
+      },
+      "unfollow" : {
+         "path" : "/:format/user/unfollow/:user",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user"
+         ],
+         "authentication" : true
+      },
+      "list_watched_repos" : {
+         "path" : "/:format/repos/watched/:user",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user"
+         ]
+      },
+      "list_keys" : {
+         "path" : "/:format/user/keys",
+         "method" : "GET",
+         "required_params" : [
+            "format"
+         ],
+         "authentication" : true
+      },
+      "add_key" : {
+         "path" : "/:format/user/key/add",
+         "method" : "POST",
+         "form-data" : {
+            "title" :   ":title",
+            "key" :     ":key"
+         },
+         "required_params" : [
+            "format",
+            "title",
+            "key"
+         ],
+         "authentication" : true
+      },
+      "remove_key" : {
+         "path" : "/:format/user/key/remove",
+         "method" : "POST",
+         "form-data" : {
+            "id" : ":id"
+         },
+         "required_params" : [
+            "format",
+            "id"
+         ],
+         "authentication" : true
+      },
+      "list_emails" : {
+         "path" : "/:format/user/emails",
+         "method" : "GET",
+         "required_params" : [
+            "format"
+         ],
+         "authentication" : true
+      },
+      "add_email" : {
+         "path" : "/:format/user/email/add",
+         "method" : "POST",
+         "form-data" : {
+            "email" : ":email"
+         },
+         "required_params" : [
+            "format",
+            "email"
+         ],
+         "authentication" : true
+      },
+      "remove_email" : {
+         "path" : "/:format/user/email/remove",
+         "method" : "POST",
+         "form-data" : {
+            "email" : ":email"
+         },
+         "required_params" : [
+            "format",
+            "email"
+         ],
+         "authentication" : true
+      }
+   },
+   "expected_status" : [ 200 ],
+   "name" : "GitHub",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://develop.github.com/",
+      "module" : "user"
+   }
+}
