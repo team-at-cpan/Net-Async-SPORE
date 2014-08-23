@@ -1,5 +1,5 @@
 package Net::Async::SPORE;
-# ABSTRACT: 
+# ABSTRACT: IO::Async support for SPORE REST definitions
 use strict;
 use warnings;
 
@@ -7,13 +7,18 @@ our $VERSION = '0.001';
 
 =head1 NAME
 
-Net::Async::SPORE -
+Net::Async::SPORE - IO::Async support for the portable REST specification
 
 =head1 SYNOPSIS
 
 =head1 DESCRIPTION
 
-=head1 METHODS
+=head2 spore
+
+This distribution will also install the C< spore > utility for running methods
+against a SPORE definition from the commandline:
+
+ spore -s github.json list_repos username=tm604
 
 =cut
 
@@ -29,5 +34,5 @@ Tom Molesworth <cpan@entitymodel.com>
 
 =head1 LICENSE
 
-Copyright Tom Molesworth 2011. Licensed under the same terms as Perl itself.
+Copyright Tom Molesworth 2012-2014. Licensed under the same terms as Perl itself.
 
