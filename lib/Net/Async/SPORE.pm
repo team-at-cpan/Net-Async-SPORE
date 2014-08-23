@@ -11,6 +11,9 @@ Net::Async::SPORE - IO::Async support for the portable REST specification
 
 =head1 DESCRIPTION
 
+B< WARNING >: This is a very early alpha release with only rudimentary client support
+included, and no middleware.
+
 Very basic SPORE client implementation for L<IO::Async>. See L<Net::Async::SPORE::Loader>
 for information.
 
