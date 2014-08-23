@@ -9,9 +9,10 @@ our $VERSION = '0.001';
 
 Net::Async::SPORE - IO::Async support for the portable REST specification
 
-=head1 SYNOPSIS
-
 =head1 DESCRIPTION
+
+Very basic SPORE client implementation for L<IO::Async>. See L<Net::Async::SPORE::Loader>
+for information.
 
 =head2 spore
 
