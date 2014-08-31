@@ -6,5 +6,7 @@ Revision history for {{$dist->name}}
 	Dependency fixes:
 	* Include Dir::Self for tests
 
+0.002     2014-08-24 02:54:05+01:00 Europe/London
+
 0.001     2014-08-23 15:52:18+01:00 Europe/London
 	Initial CPAN release
