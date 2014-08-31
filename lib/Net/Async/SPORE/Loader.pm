@@ -3,14 +3,6 @@ package Net::Async::SPORE::Loader;
 use strict;
 use warnings;
 
-use Net::Async::SPORE::Request;
-use Net::Async::SPORE::Definition;
-
-use JSON::MaybeXS;
-use File::Spec;
-
-sub inject_method(&@);
-
 =head1 NAME
 
 Net::Async::SPORE::Loader - loads SPORE API definitions
@@ -27,6 +19,16 @@ Net::Async::SPORE::Loader - loads SPORE API definitions
 =head1 DESCRIPTION
 
 This is the API loader class. It'll read in definitions and create classes in memory.
+
+=cut
+
+use Net::Async::SPORE::Request;
+use Net::Async::SPORE::Definition;
+
+use JSON::MaybeXS;
+use File::Spec;
+
+sub inject_method(&@);
 
 =head1 METHODS
 

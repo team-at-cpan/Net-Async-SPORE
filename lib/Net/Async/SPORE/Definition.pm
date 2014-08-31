@@ -1,7 +1,25 @@
 package Net::Async::SPORE::Definition;
+
 use strict;
 use warnings;
+
+=head1 NAME
+
+Net::Async::SPORE::Definition - holds information about a SPORE definition
+
+=head1 DESCRIPTION
+
+No user-serviceable parts inside. See L<Net::Async::SPORE::Loader> instead.
+
+=cut
+
 use JSON::MaybeXS;
+
+=head2 new
+
+Instantiates this object.
+
+=cut
 
 sub new { my $class = shift; bless { @_ }, $class }
 
@@ -32,3 +50,14 @@ sub _request {
 }
 
 1;
+
+__END__
+
+=head1 AUTHOR
+
+Tom Molesworth <cpan@perlsite.co.uk>
+
+=head1 LICENSE
+
+Copyright Tom Molesworth 2012-2014. Licensed under the same terms as Perl itself.
+
