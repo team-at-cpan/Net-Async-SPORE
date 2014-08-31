@@ -1,6 +1,10 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+	No new features.
+
+	Dependency fixes:
+	* Include Dir::Self for tests
 
 0.001     2014-08-23 15:52:18+01:00 Europe/London
 	Initial CPAN release
