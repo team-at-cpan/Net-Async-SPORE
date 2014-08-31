@@ -33,6 +33,7 @@ my %WriteMakefileArgs = (
     "parent" => 0
   },
   "TEST_REQUIRES" => {
+    "Dir::Self" => 0,
     "File::Spec" => 0,
     "IO::Handle" => 0,
     "IPC::Open3" => 0,
@@ -40,7 +41,7 @@ my %WriteMakefileArgs = (
     "Test::Fatal" => "0.010",
     "Test::More" => "0.98"
   },
-  "VERSION" => "0.002",
+  "VERSION" => "0.003",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -48,6 +49,7 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Dir::Self" => 0,
   "File::Spec" => 0,
   "Future" => "0.29",
   "IO::Handle" => 0,
